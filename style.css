@@ -21,15 +21,17 @@ main{
     "f f";
 }
 header,footer,nav,article,aside{
-    padding: 7px;
+    padding: 10px;
 }
 header{
     grid-area: h;
+    padding-bottom: 0px;
 }
 aside{
     grid-area: as;
     background-color: #ffffff33;
     border-radius: 6px;
+    
 }
 aside>div{
     background-color: #ffffff7d;
@@ -57,7 +59,7 @@ nav>ul>li{
     border: 1px solid #ffffff5e;
     padding: 10px;
     width: 100%;
-    background-color: #ffffff5e;
+    background-color: #555555;
     border-radius: 12px;
 }
 nav>ul>li>a{
@@ -74,6 +76,7 @@ article{
     background-color: #ffffff33;
     border-radius: 4px;
     padding-bottom: 20px;
+    padding-left: 29px;
 }
 article>div{
     background-color: #ffffff7d;
@@ -87,6 +90,8 @@ article>div{
 .ar>p{
     text-align: end;
     padding-right: 7px;
+    font-weight: bold;
+    color: #000000d4;
 }
 aside>div>button
 {
@@ -118,20 +123,21 @@ img {
 h6{
     text-align: center;
     font-size: 15px;
-    color: #ffffffad;
+    color: #ffffffc4;
 }
 hr{
     border: 1px solid #808080bd;
 }
 #osszeg{
     text-align: end;
+    font-weight: bolder;
 }
 .elemek{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.elemek>button{color: #ff000082;}
-@media screen and (max-width: 700px)
+.elemek>button{color: #ff0000eb;}
+@media screen and (max-width: 1000px)
 {
     article
     {
@@ -152,4 +158,5 @@ hr{
         "f f";
     }
     aside>div{padding: 20px;}
+    aside{padding-left: 30px;}
 }
