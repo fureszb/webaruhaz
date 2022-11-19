@@ -67,6 +67,7 @@ nav>ul>li>a{
     text-decoration: none;
     text-align: center;
     font-size: 14px;
+    display: block;
 }
 article{
     grid-area: a;
@@ -109,12 +110,13 @@ footer{
 }
 button{
     margin: 10px;
-    width: 80%;
+    width: 94%;
     border-radius: 13px;
     border-color: #80808099;
     padding: 7px;
     background-color: #555555;
     color: white;
+    transition: 0.5s;
 }
 img {
     width: 100%;
@@ -128,15 +130,45 @@ h6{
 hr{
     border: 1px solid #808080bd;
 }
+button:hover{
+    background-color: #000000d4;
+    width: 100%;
+    transition: 0.5s;
+}
 #osszeg{
     text-align: end;
     font-weight: bolder;
 }
+span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+.fizetes>span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        right: -15px;
+        transition: 0.5s;
+        top: -6px;
+        font-size: 21px;
+      }
+.fizetes:hover span {
+    padding-right: 15px;
+  }
+.fizetes:hover span:after {
+    opacity: 1;
+    right: 0;
+  }  
 .elemek{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 .elemek>button{color: #ff0000eb;}
+.gomb:hover{
+    width: 90%;
+}
 @media screen and (max-width: 1000px)
 {
     article
@@ -159,4 +191,11 @@ hr{
     }
     aside>div{padding: 20px;}
     aside{padding-left: 30px;}
+}
+@media screen and (max-width: 400px)
+{
+    article
+    {
+       grid-template-columns: repeat(2, auto);
+    }
 }
